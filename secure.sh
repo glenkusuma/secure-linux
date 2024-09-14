@@ -28,7 +28,10 @@ sudo ufw enable
 
 # --- Harden /etc/sysctl.conf ---
 # Disables the loading of kernel modules to enhance security.
-sudo sysctl kernel.modules_disabled=1
+##  Disabling kernel module loading can have implications on system functionality:
+##  1. Applications that rely on dynamically loaded kernel modules may not function as expected.
+##  2. Some systems may require specific kernel modules for hardware support or functionality.
+# sudo sysctl kernel.modules_disabled=1
 
 # Prints all the current sysctl settings.
 sudo sysctl -a
