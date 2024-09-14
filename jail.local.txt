@@ -1,0 +1,8 @@
+[DEFAULT]
+ignoreip = 127.0.0.1/8 ::1   # Ignore localhost and the loopback address range from banning.
+bantime = 3600               # Ban time (in seconds) after reaching the max retries, here it's 1 hour (3600 seconds).
+findtime = 600               # Time window (in seconds) for tracking failed login attempts, here it's 10 minutes (600 seconds).
+maxretry = 5                 # The number of allowed failed login attempts before banning.
+
+[sshd]
+enabled = true               # Enables monitoring for SSH (which typically runs on port 22).
